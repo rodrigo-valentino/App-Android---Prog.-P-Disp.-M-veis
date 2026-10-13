@@ -1,4 +1,4 @@
-package com.rafael.firstapplication
+package com.rodrigo.firstapplication
 
 import org.junit.Test
 

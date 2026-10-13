@@ -1,15 +1,13 @@
-import com.google.wireless.android.sdk.stats.GradleBuildVariant
-
 plugins {
     alias(libs.plugins.android.application)
 }
 
 android {
-    namespace = "com.rafael.firstapplication"
+    namespace = "com.rodrigo.firstapplication"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.rafael.firstapplication"
+        applicationId = "com.rodrigo.firstapplication"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

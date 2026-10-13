@@ -1,13 +1,12 @@
-package com.rafael.firstapplication
+package com.rodrigo.firstapplication
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.rafael.firstapplication.databinding.ActivityMainBinding
+import com.rodrigo.firstapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,13 +24,21 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        //val button = findViewById<Button>(R.id.button)
-        //val editText = findViewById<EditText>(R.id.editText)
-        val editText = binding.editText
+        // Referências dos campos e do botão definidos no layout XML
+        val editTextEmail = binding.editText
+        val editTextPassword = binding.editTextPassword
         val button = binding.button
 
-        button.setOnClickListener { view ->
-            println(editText.text)
+        // Ao clicar no botão, lê o e-mail e a senha e mostra em um Toast
+        button.setOnClickListener {
+            val email = editTextEmail.text.toString()
+            val senha = editTextPassword.text.toString()
+
+            Toast.makeText(
+                this,
+                "Email: $email\nSenha: $senha",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 }
